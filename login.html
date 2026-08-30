@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — HireHere.com</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">HireHere.com</a>
+      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Primary"></nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="auth-wrap card">
+      <h1>Login</h1>
+      <p class="muted">Sign in to apply for jobs or manage hiring on HireHere.com.</p>
+      <div id="login-alert"></div>
+      <form id="login-form">
+        <div class="field">
+          <label for="login-email">Email</label>
+          <input id="login-email" name="email" type="email" autocomplete="username" required>
+        </div>
+        <div class="field" style="margin-top: 0.8rem;">
+          <label for="login-password">Password</label>
+          <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+        </div>
+        <button class="btn" type="submit" style="margin-top: 1rem; width: 100%;">Login</button>
+      </form>
+      <p class="demo-note" style="margin-top: 1rem;">
+        Demo accounts (prototype only):<br>
+        Job seeker: seeker@hirehere.com / demo123<br>
+        Employer: employer@hirehere.com / demo123<br>
+        Passwords are stored in localStorage for this demo and are not secure.
+      </p>
+      <p>New here? <a href="register.html">Register</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

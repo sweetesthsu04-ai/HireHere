@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Candidates — HireHere.com</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="candidates">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">HireHere.com</a>
+      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Primary"></nav>
+    </div>
+  </header>
+  <main id="main" class="container" style="padding: 2rem 0 3rem;">
+    <h1>Find candidates</h1>
+    <p class="lead">Search people by name, skill, category, experience, or location.</p>
+    <form class="search-card" id="candidate-search" style="margin-bottom:1.2rem;">
+      <div class="search-grid search-grid-wide">
+        <div class="field"><label for="c-name">Name</label><input id="c-name" name="name" type="search"></div>
+        <div class="field"><label for="c-skill">Skill</label><input id="c-skill" name="skill" placeholder="e.g. JavaScript"></div>
+        <div class="field"><label for="c-category">Job category</label><select id="c-category" name="category"><option value="">All</option></select></div>
+        <div class="field">
+          <label for="c-exp">Experience</label>
+          <select id="c-exp" name="experience">
+            <option value="">Any</option>
+            <option value="Entry Level">Entry Level</option>
+            <option value="Mid Level">Mid Level</option>
+            <option value="Senior Level">Senior Level</option>
+          </select>
+        </div>
+        <button class="btn" type="submit">Search</button>
+      </div>
+      <div class="field" style="margin-top:0.8rem;max-width:280px;">
+        <label for="c-location">Location</label>
+        <input id="c-location" name="location">
+      </div>
+    </form>
+    <p class="results-count" id="candidates-count" aria-live="polite"></p>
+    <div class="card-grid" id="candidates-results"></div>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

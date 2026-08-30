@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Next Job — HireHere.com</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="jobs">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">HireHere.com</a>
+      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Primary"></nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <div class="page-head">
+      <h1>Find Your Next Job</h1>
+      <p class="lead">Search by keyword, location, and category. Combine filters to narrow results.</p>
+    </div>
+
+    <form class="search-card" id="jobs-search" style="margin-bottom: 1.2rem;">
+      <div class="search-grid">
+        <div class="field">
+          <label for="job-keyword">Keyword</label>
+          <input id="job-keyword" name="q" type="search" placeholder="Job title or keyword">
+        </div>
+        <div class="field">
+          <label for="job-location">Location</label>
+          <input id="job-location" name="location" type="text" placeholder="City or region">
+        </div>
+        <div class="field">
+          <label for="job-category">Category</label>
+          <select id="job-category" name="category">
+            <option value="">All categories</option>
+          </select>
+        </div>
+        <button class="btn" type="submit">Search Jobs</button>
+      </div>
+    </form>
+
+    <div class="layout-2">
+      <aside class="filters card" aria-label="Job filters">
+        <fieldset class="filter-group">
+          <legend><h3>Job type</h3></legend>
+          <label class="check"><input type="checkbox" name="jobType" value="Full Time"> Full Time</label>
+          <label class="check"><input type="checkbox" name="jobType" value="Part Time"> Part Time</label>
+          <label class="check"><input type="checkbox" name="jobType" value="Contract"> Contract</label>
+          <label class="check"><input type="checkbox" name="jobType" value="Internship"> Internship</label>
+        </fieldset>
+        <fieldset class="filter-group">
+          <legend><h3>Experience</h3></legend>
+          <label class="check"><input type="checkbox" name="experience" value="Entry Level"> Entry Level</label>
+          <label class="check"><input type="checkbox" name="experience" value="Mid Level"> Mid Level</label>
+          <label class="check"><input type="checkbox" name="experience" value="Senior Level"> Senior Level</label>
+        </fieldset>
+        <fieldset class="filter-group">
+          <legend><h3>Salary</h3></legend>
+          <label class="check"><input type="radio" name="salary" value="" checked> Any</label>
+          <label class="check"><input type="radio" name="salary" value="under500"> Under $500</label>
+          <label class="check"><input type="radio" name="salary" value="500-1000"> $500–$1000</label>
+          <label class="check"><input type="radio" name="salary" value="1000-2000"> $1000–$2000</label>
+          <label class="check"><input type="radio" name="salary" value="2000plus"> $2000+</label>
+        </fieldset>
+        <fieldset class="filter-group">
+          <legend><h3>Remote</h3></legend>
+          <label class="check"><input type="checkbox" name="workMode" value="Remote"> Remote</label>
+          <label class="check"><input type="checkbox" name="workMode" value="On-site"> On-site</label>
+          <label class="check"><input type="checkbox" name="workMode" value="Hybrid"> Hybrid</label>
+        </fieldset>
+        <button type="button" class="btn btn-secondary" id="clear-filters">Clear filters</button>
+      </aside>
+      <section>
+        <p class="results-count" id="jobs-count" aria-live="polite"></p>
+        <div class="card-grid" id="jobs-results"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

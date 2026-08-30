@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Job — HireHere.com</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="post-job">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">HireHere.com</a>
+      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Primary"></nav>
+    </div>
+  </header>
+  <main id="main" class="container" style="padding: 2rem 0 3rem;">
+    <h1 id="post-job-title">Post a Job</h1>
+    <p class="muted">Tell candidates what you need. Required fields are marked.</p>
+    <div id="post-job-alert"></div>
+    <form id="post-job-form" class="panel">
+      <div class="form-grid cols-2">
+        <div class="field"><label for="pj-company">Company Name *</label><input id="pj-company" name="companyName" required></div>
+        <div class="field"><label for="pj-title">Job Title *</label><input id="pj-title" name="title" required></div>
+        <div class="field"><label for="pj-category">Category *</label><select id="pj-category" name="category" required></select></div>
+        <div class="field"><label for="pj-location">Location *</label><input id="pj-location" name="location" required></div>
+        <div class="field"><label for="pj-salary">Salary (monthly USD) *</label><input id="pj-salary" name="salaryAmount" type="number" min="0" required></div>
+        <div class="field">
+          <label for="pj-type">Job Type *</label>
+          <select id="pj-type" name="jobType" required>
+            <option value="Full Time">Full Time</option>
+            <option value="Part Time">Part Time</option>
+            <option value="Contract">Contract</option>
+            <option value="Internship">Internship</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="pj-exp">Experience Level *</label>
+          <select id="pj-exp" name="experience" required>
+            <option value="Entry Level">Entry Level</option>
+            <option value="Mid Level">Mid Level</option>
+            <option value="Senior Level">Senior Level</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="pj-mode">Work Mode *</label>
+          <select id="pj-mode" name="workMode" required>
+            <option value="On-site">On-site</option>
+            <option value="Remote">Remote</option>
+            <option value="Hybrid">Hybrid</option>
+          </select>
+        </div>
+        <div class="field"><label for="pj-deadline">Application Deadline *</label><input id="pj-deadline" name="deadline" type="date" required></div>
+      </div>
+      <div class="field" style="margin-top:0.9rem;"><label for="pj-desc">Job Description *</label><textarea id="pj-desc" name="description" required></textarea></div>
+      <div class="field" style="margin-top:0.9rem;"><label for="pj-resp">Responsibilities *</label><textarea id="pj-resp" name="responsibilities" required></textarea></div>
+      <div class="field" style="margin-top:0.9rem;"><label for="pj-req">Requirements *</label><textarea id="pj-req" name="requirements" required></textarea></div>
+      <div class="field" style="margin-top:0.9rem;"><label for="pj-skills">Required Skills * (comma separated)</label><input id="pj-skills" name="skills" required></div>
+      <div class="field" style="margin-top:0.9rem;"><label for="pj-benefits">Benefits *</label><textarea id="pj-benefits" name="benefits" required></textarea></div>
+      <button class="btn" type="submit" style="margin-top:1rem;" id="pj-submit">Publish Job</button>
+    </form>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

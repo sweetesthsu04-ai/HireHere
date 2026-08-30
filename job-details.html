@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job details — HireHere.com</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="job-details">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">HireHere.com</a>
+      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Primary"></nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" style="padding-bottom: 3rem;">
+    <p><a href="jobs.html">Back to jobs</a></p>
+    <div id="job-details-root"></div>
+  </main>
+
+  <div id="apply-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="apply-title">
+    <div class="modal">
+      <h2 id="apply-title">Apply for this job</h2>
+      <form id="apply-form">
+        <div class="field">
+          <label for="apply-name">Full Name</label>
+          <input id="apply-name" name="fullName" required>
+        </div>
+        <div class="field">
+          <label for="apply-email">Email</label>
+          <input id="apply-email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="apply-phone">Phone</label>
+          <input id="apply-phone" name="phone" required>
+        </div>
+        <div class="field">
+          <label for="apply-resume">Resume</label>
+          <select id="apply-resume" name="resume">
+            <option value="My Resume.pdf">My Resume.pdf (placeholder)</option>
+            <option value="CV.pdf">CV.pdf (placeholder)</option>
+          </select>
+          <p class="muted">This prototype does not upload files. Choose a resume placeholder.</p>
+        </div>
+        <div class="field">
+          <label for="apply-cover">Cover Letter</label>
+          <textarea id="apply-cover" name="coverLetter" required placeholder="Write a short cover letter"></textarea>
+        </div>
+        <div class="actions" style="margin-top: 1rem;">
+          <button class="btn" type="submit">Submit Application</button>
+          <button class="btn btn-secondary" type="button" id="apply-cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

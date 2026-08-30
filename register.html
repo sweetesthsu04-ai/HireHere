@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — HireHere.com</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="register">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">HireHere.com</a>
+      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Primary"></nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="auth-wrap card">
+      <h1>Create an account</h1>
+      <p class="muted">Choose how you will use HireHere.com.</p>
+      <div id="register-alert"></div>
+      <form id="register-form">
+        <div class="role-toggle" role="radiogroup" aria-label="Account type">
+          <label><input type="radio" name="role" value="seeker" checked> I am a Job Seeker</label>
+          <label><input type="radio" name="role" value="employer"> I am an Employer</label>
+        </div>
+
+        <div id="seeker-fields">
+          <div class="field"><label for="reg-name">Full Name</label><input id="reg-name" name="fullName"></div>
+          <div class="field" style="margin-top:0.7rem;"><label for="reg-email">Email</label><input id="reg-email" name="email" type="email"></div>
+          <div class="field" style="margin-top:0.7rem;"><label for="reg-phone">Phone</label><input id="reg-phone" name="phone"></div>
+          <div class="field" style="margin-top:0.7rem;"><label for="reg-location">Location</label><input id="reg-location" name="location" placeholder="e.g. Yangon"></div>
+        </div>
+
+        <div id="employer-fields" class="hidden">
+          <div class="field"><label for="reg-emp-name">Full Name</label><input id="reg-emp-name" name="employerName"></div>
+          <div class="field" style="margin-top:0.7rem;"><label for="reg-company">Company Name</label><input id="reg-company" name="companyName"></div>
+          <div class="field" style="margin-top:0.7rem;"><label for="reg-company-email">Company Email</label><input id="reg-company-email" name="companyEmail" type="email"></div>
+          <div class="field" style="margin-top:0.7rem;"><label for="reg-emp-phone">Phone</label><input id="reg-emp-phone" name="employerPhone"></div>
+          <div class="field" style="margin-top:0.7rem;"><label for="reg-company-location">Company Location</label><input id="reg-company-location" name="companyLocation"></div>
+        </div>
+
+        <div class="field" style="margin-top:0.7rem;"><label for="reg-password">Password</label><input id="reg-password" name="password" type="password" autocomplete="new-password"></div>
+        <div class="field" style="margin-top:0.7rem;"><label for="reg-confirm">Confirm Password</label><input id="reg-confirm" name="confirm" type="password" autocomplete="new-password"></div>
+        <button class="btn" type="submit" style="margin-top:1rem;width:100%;">Register</button>
+      </form>
+      <p class="demo-note">This is a frontend prototype. Accounts are saved only in this browser. Real products must hash passwords on a secure server.</p>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

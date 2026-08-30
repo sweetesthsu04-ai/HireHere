@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HireHere.com — Find Jobs. Find Talent. Build Your Future.</title>
+  <meta name="description" content="HireHere.com connects job seekers with employers. Find jobs or hire talent.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">HireHere.com</a>
+      <button type="button" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Primary"></nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <p class="tagline">Find Jobs. Find Talent. Build Your Future.</p>
+        <h1>Find the Right Job or the Right Talent.</h1>
+        <p class="lead">HireHere.com connects job seekers with employers and makes finding jobs and hiring talent simple.</p>
+
+        <form class="search-card" id="home-job-search" role="search" aria-label="Search jobs">
+          <div class="search-grid">
+            <div class="field">
+              <label for="home-keyword">Job title or keyword</label>
+              <input id="home-keyword" name="q" type="search" placeholder="e.g. Web Developer">
+            </div>
+            <div class="field">
+              <label for="home-location">Location</label>
+              <input id="home-location" name="location" type="text" placeholder="e.g. Yangon">
+            </div>
+            <div class="field">
+              <label for="home-category">Category</label>
+              <select id="home-category" name="category">
+                <option value="">All categories</option>
+              </select>
+            </div>
+            <button class="btn" type="submit">Search Jobs</button>
+          </div>
+        </form>
+        <div class="hero-actions">
+          <a class="btn btn-secondary" href="candidates.html">Find Candidates</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="categories-heading">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 id="categories-heading">Popular categories</h2>
+            <p class="tagline">Browse jobs by the most common hiring areas.</p>
+          </div>
+        </div>
+        <div class="cat-grid" id="category-list"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 id="featured-heading">Featured jobs</h2>
+            <p class="tagline">A few current openings on HireHere.com.</p>
+          </div>
+          <a href="jobs.html">View all jobs</a>
+        </div>
+        <div class="card-grid" id="featured-jobs"></div>
+      </div>
+    </section>
+
+    <section class="section" id="how" aria-labelledby="how-heading">
+      <div class="container">
+        <h2 id="how-heading">How HireHere works</h2>
+        <div class="how-grid">
+          <article class="panel">
+            <h3>For job seekers</h3>
+            <ol class="steps">
+              <li>Create your profile</li>
+              <li>Search for jobs</li>
+              <li>Apply</li>
+              <li>Track your application</li>
+            </ol>
+            <a class="btn" href="register.html">Create a job seeker account</a>
+          </article>
+          <article class="panel">
+            <h3>For employers</h3>
+            <ol class="steps">
+              <li>Create company profile</li>
+              <li>Post a job</li>
+              <li>Find candidates</li>
+              <li>Hire the right person</li>
+            </ol>
+            <a class="btn btn-secondary" href="register.html">Create an employer account</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="why-heading">
+      <div class="container">
+        <h2 id="why-heading">Why choose HireHere</h2>
+        <div class="why-grid">
+          <article class="panel">
+            <h3>Simple search</h3>
+            <p>Find jobs or candidates with clear filters for location, skills, and job type.</p>
+          </article>
+          <article class="panel">
+            <h3>Clear application status</h3>
+            <p>See whether an application is pending, shortlisted, accepted, rejected, or hired.</p>
+          </article>
+          <article class="panel">
+            <h3>Built for both sides</h3>
+            <p>Job seekers apply and track. Employers post jobs and manage hiring in one place.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading">About HireHere.com</h2>
+        <p class="lead">HireHere.com is a simple job marketplace. Job seekers search vacancies, apply, save jobs, and track status. Employers post openings, review applications, and find talent. This version is a frontend prototype using your browser’s local storage — not a live backend.</p>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <h2>Ready to get started?</h2>
+        <p>Create a free demo account and try searching, applying, or posting a job.</p>
+        <a class="btn" href="register.html">Register on HireHere.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
